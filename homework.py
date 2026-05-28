@@ -23,14 +23,30 @@ class Student():
 
     # 여기서부터 각자 메소드를 하나씩 만들어보세요!
 
+# 유성원 / 친한친구를 추가하는 메소드 입니다. 친구 이름을 받아서 그 리스트에 추가합니다.
+class FriendList :
+    def __init__(self):
+        self.friends = []
+
+    def add_friend(self, name):
+        self.friends.append(name)
+
+ysw_list = FriendList()
+
+ysw_list.add_friend("신정민")
+ysw_list.add_friend("박주성")
+
+print(ysw_list.friends)
+
+    
 # 우재성 / jaeseong 객체와 denji 객체를 생성합니다.
-jaeseong = Student("우재성", 27, 165) # <- 이런식으로 객체를 생성하자마자 값을 넣어주는게 '생성자 메소드' 덕분에 가능합니다.
-denji = Student("덴지", 20, 170)
+# jaeseong = Student("우재성", 27, 165) # <- 이런식으로 객체를 생성하자마자 값을 넣어주는게 '생성자 메소드' 덕분에 가능합니다.
+# denji = Student("덴지", 20, 170)
 
 # 우재성 / setBestFriend 메소드를 호출하여 덴지를 베프로 설정합니다.
-jaeseong.setBestFriend(denji)
+# jaeseong.setBestFriend(denji)
 # 우재성 / jaeseong 객체의 베프의 이름을 출력합니다.
-print(jaeseong.bestFriend.name)
+# print(jaeseong.bestFriend.name)
 
 # ** 숙제 TIP **
 # 객체란 속성과 메소드를 가진 기능의 주체입니다. 이를 좀더 풀어서 설명하면
