@@ -28,13 +28,13 @@ class FriendList :
     def __init__(self):
         self.friends = []
 
-    def add_friend(self, name):
+    def add_friend(self, name :str):
         self.friends.append(name)
 
 ysw_list = FriendList()
 
-ysw_list.add_friend("신정민")
-ysw_list.add_friend("박주성")
+ysw_list.add_friend("짱구")
+ysw_list.add_friend("철수")
 
 print(ysw_list.friends)
 
