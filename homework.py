@@ -56,8 +56,8 @@ want_height = float(input("빼앗고 싶은 키를 입력 하세요 : "))
 
 # 홍서준 / 생성자 메소드를 호출하여 값을 넣고 변수에 저장
 # 불 필요한 데이터는 None 처리하고, 키는 연산을 위해 float으로 강제 형변환
-stealer = Student(steal_name, None, None, float(steal_height))
-target = Student(target_name, None, None, float(target_height))
+stealer = Student(steal_name, None, float(steal_height))
+target = Student(target_name, None, float(target_height))
 
 # 홍서준 / stealer 객체의 stealHeight 메소드를 불러옴
 stealer.stealHeight(target, want_height)
@@ -73,8 +73,8 @@ stealer.stealHeight(target, want_height)
 # print(jaeseong.bestFriend.name)
 
 # 이상엽 / fightBestFriend 메서드를 호출하여 덴지를 베프에서 삭제합니다.
-jaeseong.fightBestFriend(denji)
-jaeseong.fightBestFriend(denji) # <- 베프로 설정되어 있지 않은 상태에서 결과를 확인하기 위해 한번 더 호출
+# jaeseong.fightBestFriend(denji)
+# jaeseong.fightBestFriend(denji) # <- 베프로 설정되어 있지 않은 상태에서 결과를 확인하기 위해 한번 더 호출
 
 # ** 숙제 TIP **
 # 객체란 속성과 메소드를 가진 기능의 주체입니다. 이를 좀더 풀어서 설명하면
