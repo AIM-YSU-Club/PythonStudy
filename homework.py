@@ -11,10 +11,9 @@ class Student():
     favoiteFoods: list[str] # 좋아하는 음식 리스트
 
     # 우재성 / 생성자 메소드. 객체를 생성할 호출됩니다.
-    def __init__(self, name: str, age: int, bodyWeight: float, bodyHeight: float):
+    def __init__(self, name: str, age: int, bodyHeight: float):
         self.name = name
         self.age = age
-        self.bodyWeight = bodyWeight
         self.bodyHeight = bodyHeight
     
     # 우재성 / 베프를 설정하는 메소드. 자기 자신과 같은 타입의 객체를 받고 저장합니다. 
@@ -22,6 +21,14 @@ class Student():
         self.bestFriend = bf
 
     # 여기서부터 각자 메소드를 하나씩 만들어보세요!
+
+    # 이상엽 / 베프를 삭제하는 메서드. 자기 자신과 같은 타입의 객체를 받고 if문 사용해서 베프 등록되어 있는지 확인한 뒤 등록되어 있으면 삭제합니다.
+    def fightBestFriend(self, bf: "Student"):
+        if self.bestFriend == bf:
+            print(bf.name, "와 싸웠습니다. 이제 베프가 아닙니다.")
+            self.bestFriend = None
+        else:
+            print(bf.name, "와 베프가 아닙니다!")
 
 # 우재성 / jaeseong 객체와 denji 객체를 생성합니다.
 jaeseong = Student("우재성", 27, 165) # <- 이런식으로 객체를 생성하자마자 값을 넣어주는게 '생성자 메소드' 덕분에 가능합니다.
@@ -31,6 +38,10 @@ denji = Student("덴지", 20, 170)
 jaeseong.setBestFriend(denji)
 # 우재성 / jaeseong 객체의 베프의 이름을 출력합니다.
 print(jaeseong.bestFriend.name)
+
+# 이상엽 / fightBestFriend 메서드를 호출하여 덴지를 베프에서 삭제합니다.
+jaeseong.fightBestFriend(denji)
+jaeseong.fightBestFriend(denji) # <- 베프로 설정되어 있지 않은 상태에서 결과를 확인하기 위해 한번 더 호출
 
 # ** 숙제 TIP **
 # 객체란 속성과 메소드를 가진 기능의 주체입니다. 이를 좀더 풀어서 설명하면
