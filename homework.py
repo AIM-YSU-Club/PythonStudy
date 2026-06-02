@@ -31,6 +31,17 @@ class Student():
     
 
 
+    # 윤성민 / 타겟을 받아서 이름이 홍서준이것을 검사를 하고 홍서준이 맞으면 때립니다. 그러면 몸무게가 100kg이 빠집니다. 근데 몸무게가 음수가 될수 없어서 100을 뺸 결과가 0보다 작으면 10kg설정 합니다.
+    def hitOtherStudent(self, target: "Student"):
+        if target.name == '홍서준':
+            print("홍서준을 때렸습니다.")
+        
+        target.bodyWeight -= 100 
+        if target.bodyWeight < 0:
+            target.bodyWeight = 10
+        
+
+        
     # 여기서부터 각자 메소드를 하나씩 만들어보세요!
     
     # 이상엽 / 베프를 삭제하는 메서드. 자기 자신과 같은 타입의 객체를 받고 if문 사용해서 베프 등록되어 있는지 확인한 뒤 등록되어 있으면 삭제합니다.
