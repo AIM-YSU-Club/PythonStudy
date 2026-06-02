@@ -82,8 +82,20 @@ stealer.stealHeight(target, want_height)
 # jaeseong.fightBestFriend(denji)
 # jaeseong.fightBestFriend(denji) # <- 베프로 설정되어 있지 않은 상태에서 결과를 확인하기 위해 한번 더 호출
 
-seungil = Student("양승일", 24, 172)
-seungil.jump(10)
+# 유성원 / 친한친구를 추가하는 메소드 입니다. 친구 이름을 받아서 그 리스트에 추가합니다.
+class FriendList :
+    def __init__(self):
+        self.friends = []
+
+    def add_friend(self, name :str):
+        self.friends.append(name)
+
+ysw_list = FriendList()
+
+ysw_list.add_friend("짱구")
+ysw_list.add_friend("철수")
+
+print(ysw_list.friends)
 
 
 # ** 숙제 TIP **
