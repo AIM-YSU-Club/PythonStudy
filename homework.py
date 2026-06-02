@@ -19,6 +19,17 @@ class Student():
     # 우재성 / 베프를 설정하는 메소드. 자기 자신과 같은 타입의 객체를 받고 저장합니다.
     def setBestFriend(self, bf: "Student"):
         self.bestFriend = bf
+    
+    # 양승일/ 키를 설정하는 메소드  자기가 점프를 하면키가커집니다
+
+    def jump(self, add_height: int):
+        print(f"현재 키는 {self.bodyHeight}입니다")
+        self.bodyHeight = self.bodyHeight + add_height
+        
+        print(f"키가 증가했습니다:{self.bodyHeight}")
+
+    
+
 
     # 여기서부터 각자 메소드를 하나씩 만들어보세요!
     
@@ -67,14 +78,13 @@ stealer.stealHeight(target, want_height)
 # jaeseong = Student("우재성", 27, 165)
 # denji = Student("덴지", 20, 170)
 
-# # # 우재성 / setBestFriend 메소드를 호출하여 덴지를 베프로 설정합니다.
-# jaeseong.setBestFriend(denji)
-# # # # 우재성 / jaeseong 객체의 베프의 이름을 출력합니다.
-# print(jaeseong.bestFriend.name)
-
 # 이상엽 / fightBestFriend 메서드를 호출하여 덴지를 베프에서 삭제합니다.
 # jaeseong.fightBestFriend(denji)
 # jaeseong.fightBestFriend(denji) # <- 베프로 설정되어 있지 않은 상태에서 결과를 확인하기 위해 한번 더 호출
+
+seungil = Student("양승일", 24, 172)
+seungil.jump(10)
+
 
 # ** 숙제 TIP **
 # 객체란 속성과 메소드를 가진 기능의 주체입니다. 이를 좀더 풀어서 설명하면
